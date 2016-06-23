@@ -75,7 +75,7 @@ function acf_get_metadata( $post_id = 0, $name = '', $hidden = false ) {
 		// this is for future use when the rest of acf is converted to using 
 		// "term_" as a prefix for all term "post ID" values
 		
-		$term_id = $comment_id = (int) substr($post_id, 5);
+		$term_id = (int) substr($post_id, 5);
 		
 		$meta = get_metadata( 'term', $term_id, $name, false );
 		
@@ -177,7 +177,7 @@ function acf_update_metadata( $post_id = 0, $name = '', $value = '', $hidden = f
 		// this is for future use when the rest of acf is converted to using 
 		// "term_" as a prefix for all term "post ID" values
 		
-		$term_id = $comment_id = (int) substr($post_id, 5);
+		$term_id = (int) substr($post_id, 5);
 		
 		if (apply_filters('acf/keep_taxonomy_option', false)) {
 			// a filter for people that have used 
